@@ -14,6 +14,6 @@ jobs:
     ## Define a sequence of steps to be executed 
     steps:
       ## Build the Python Helloworld image
-      - run: docker build -t python-helloworld ./exercises/python-helloworld
+      - run: docker build -t python-helloworld GITHUB_ACTION_PATH/../../exercises/python-helloworld
       ## Push that image to Docker hub 
       - run: docker push daveroye/python-helloworld:v1.0.0
